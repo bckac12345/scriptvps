@@ -38,10 +38,6 @@ IZIN=$(wget -qO- ipinfo.io/ip);
 
 rm -f setup.sh
 clear
-if [ -f "/etc/xray/domain" ]; then
-echo "Script Already Installed"
-exit 0
-fi
 mkdir /var/lib/akbarstorevpn;
 echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
 wget https://${akbarvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
